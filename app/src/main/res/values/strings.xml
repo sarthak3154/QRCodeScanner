@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LokuApp</string>
+    <string name="string_generate_qr_code">Generate</string>
+    <string name="string_read_qr_code">Reader</string>
+    <string name="string_app_bar_title">QR Code</string>
+    <string name="string_qr_code_main_info">You can either</string>
+    <string name="string_generate_info">Generate QR Code</string>
+    <string name="string_or_info">OR</string>
+    <string name="string_read_info">Read QR Code</string>
+    <string name="string_app_bar_generator_title">Generate QR Code</string>
+    <string name="string_enter_email">Enter Email</string>
+    <string name="string_enter_name">Enter Name</string>
+    <string name="string_enter_mobile">Enter Mobile No</string>
+    <string name="string_generate">Generate</string>
+    <string name="string_app_bar_scan_title">Scan QR Code</string>
+</resources>

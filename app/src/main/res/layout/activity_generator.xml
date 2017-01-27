@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarGenerator"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/string_app_bar_generator_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/dimen_18sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarGenerator">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/string_enter_name">
+
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textCapWords"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputMobileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputNameLayout"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/string_enter_mobile">
+
+                <EditText
+                    android:id="@+id/editTextMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="phone"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputEmailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputMobileLayout"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/string_enter_email">
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imageQR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputEmailLayout"
+                android:layout_marginBottom="@dimen/dimen_40dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_20dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonGenerateQR"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:background="@drawable/rectangular_accent_button"
+        android:text="@string/string_generate"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_17sp" />
+
+</RelativeLayout>

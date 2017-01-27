@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.loku.sarthak.lokuapp.MainActivity">
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonGenerate"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/string_generate_qr_code"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonRead"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@drawable/circle_button"
+        android:text="@string/string_read_qr_code"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_14sp" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/string_app_bar_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/dimen_18sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/textSnippetInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/string_qr_code_main_info"
+            android:textSize="@dimen/dimen_22sp" />
+
+        <TextView
+            android:id="@+id/textGenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSnippetInfo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/string_generate_info"
+            android:textSize="@dimen/dimen_26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textOR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textGenerate"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_10dp"
+            android:text="@string/string_or_info"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/dimen_24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textOR"
+            android:layout_centerHorizontal="true"
+            android:text="@string/string_read_info"
+            android:textSize="@dimen/dimen_26sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
