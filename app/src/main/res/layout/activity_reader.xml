@@ -31,10 +31,11 @@
 
 
     <com.journeyapps.barcodescanner.CompoundBarcodeView
-        android:layout_width="match_parent"
         android:id="@+id/qrCodeView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbarReader">
+        android:layout_below="@id/toolbarReader"
+        android:visibility="gone">
 
     </com.journeyapps.barcodescanner.CompoundBarcodeView>
 </RelativeLayout>
