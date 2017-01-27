@@ -9,6 +9,7 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <item name="android:windowBackground">@color/color_white</item>
+        <item name="android:windowAnimationStyle">@style/DefaultActivityAnimation</item>
     </style>
 
 

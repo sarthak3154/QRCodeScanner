@@ -1,6 +1,7 @@
 package com.loku.sarthak.lokuapp;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.PointF;
 import android.hardware.Camera;
@@ -11,7 +12,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,7 +38,8 @@ public class ReaderActivity extends AppCompatActivity implements ReaderScreenCon
 
     @Bind(R.id.qrCodeView)
     CompoundBarcodeView barcodeView;
-
+    @Bind(R.id.toolbarReader)
+    Toolbar toolbar;
     private static final int MY_PERMISSIONS_REQUEST_CAMERA = 1;
     private ReaderScreenContract.Presenter presenter;
 
@@ -50,6 +54,10 @@ public class ReaderActivity extends AppCompatActivity implements ReaderScreenCon
     public void init() {
         ButterKnife.bind(this);
         presenter = new ReaderScreenPresenter(this);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
     }
 
     @Override
@@ -92,14 +100,18 @@ public class ReaderActivity extends AppCompatActivity implements ReaderScreenCon
 
     private void startQRCodeScanning() {
         barcodeView.setVisibility(View.VISIBLE);
-        barcodeView.decodeContinuous(new BarcodeCallback() {
+
+        barcodeView.decodeSingle(new BarcodeCallback() {
             @Override
             public void barcodeResult(BarcodeResult result) {
                 Log.i("Result", result.getResult().getText());
                 String[] splitString = result.getText().split("_");
-                if (splitString.length == 3) {
-                    Toast.makeText(getBaseContext(), "Welcome " + splitString[0] + "!", Toast.LENGTH_SHORT).show();
-                    finish();
+                if (splitString.length == 4) {
+//                    Toast.makeText(getBaseContext(), "Welcome " + splitString[0] + "!", Toast.LENGTH_SHORT).show();
+                    Intent detailsIntent = new Intent(getBaseContext(), QRCodeGetInfoActivity.class);
+                    detailsIntent.putExtra("stringArray", splitString);
+                    startActivity(detailsIntent);
+//                    finish();
                 } else {
                     Toast.makeText(getBaseContext(), "QR Code Scan Success!", Toast.LENGTH_SHORT).show();
                     finish();
@@ -125,6 +137,18 @@ public class ReaderActivity extends AppCompatActivity implements ReaderScreenCon
                 } else {
                     Toast.makeText(getBaseContext(), "Camera Permission Required! Kindly change from App Settings", Toast.LENGTH_SHORT).show();
                 }
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

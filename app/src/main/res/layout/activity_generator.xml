@@ -13,20 +13,14 @@
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/string_app_bar_generator_title"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dimen_18sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/string_app_bar_generator_title"
-                android:textColor="@color/color_white"
-                android:textSize="@dimen/dimen_18sp" />
-        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -122,15 +116,7 @@
                     android:textSize="@dimen/dimen_16sp" />
             </android.support.design.widget.TextInputLayout>
 
-            <ImageView
-                android:id="@+id/imageQR"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textInputEmailLayout"
-                android:layout_marginBottom="@dimen/dimen_40dp"
-                android:layout_marginLeft="@dimen/dimen_10dp"
-                android:layout_marginRight="@dimen/dimen_10dp"
-                android:layout_marginTop="@dimen/dimen_20dp" />
+
         </RelativeLayout>
 
     </ScrollView>

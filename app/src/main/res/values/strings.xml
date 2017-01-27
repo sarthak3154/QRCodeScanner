@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LokuApp</string>
+    <string name="app_name">QRgen</string>
     <string name="string_generate_qr_code">Generate</string>
     <string name="string_read_qr_code">Reader</string>
     <string name="string_app_bar_title">QR Code</string>
@@ -13,4 +13,14 @@
     <string name="string_enter_mobile">Enter Mobile No</string>
     <string name="string_generate">Generate</string>
     <string name="string_app_bar_scan_title">Scan QR Code</string>
+    <string name="string_app_bar_qrcode_title">QR Code</string>
+    <string name="string_qr_scan_info">Just let out! Scan the QR Code to know more.</string>
+    <string name="string_app_bar_qrcode_info_title">Who\'s that?</string>
+    <string name="string_id">QRgen ID</string>
+    <string name="string_name">Name</string>
+    <string name="string_mobile">Mobile</string>
+    <string name="string_email">Email</string>
+    <string name="string_name_recognize">Do you recognize him?</string>
+    <string name="string_no">No</string>
+    <string name="string_yes">Yes</string>
 </resources>
